@@ -5,9 +5,9 @@ const Footer=()=>{
         <footer>
             <div className="main-footer">
                 <div className="left-footer">
-                    <h2>REACT</h2>
+                    <h2>Mitronwear</h2>
                     <div className="defination-wrap">
-                        <p className="defination">React is a free and open-source front-end JavaScript library for building user interfaces (UIs) based on UI components. Developed by Facebook</p>
+                        <p className="defination">It is not just a clothing brand but an emotion</p>
                     </div>
                 </div>
                 <div className="right-footer">
