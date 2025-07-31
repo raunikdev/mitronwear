@@ -1,5 +1,4 @@
-import ButterflyBack from './tshirtImages/butterflyBack.png'
-import ButterflyFront from './tshirtImages/butterflyFront.png'
+
 
 import './css/tshirtcard.css'
 

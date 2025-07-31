@@ -98,7 +98,7 @@ function Home() {
 
       <p className="timer-heading">The Website will Re-release in:</p>
       <p className="clock">{Timer()}</p>
-      {/* <div className="join-explore">
+      <div className="join-explore">
         <button className="join-waitlist" onClick={handleJoinWaitList}>
           Join WaitList
         </button>
@@ -107,7 +107,7 @@ function Home() {
             Explore Design
           </button>
         </a>
-      </div> */}
+      </div>
     </div>
   );
 }
