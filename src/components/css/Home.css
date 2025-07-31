@@ -36,3 +36,21 @@
 
   /* height: 30px; */
 }
+@media(max-width: 703px){
+  .timer-heading{
+    font-size: 30px;
+  }
+}
+@media(max-width: 610px){
+  .clock{
+    font-size: 18px;
+  }
+}
+@media(max-width: 450px){
+  .timer-heading{
+    font-size: 25px;
+  }
+  .clock{
+    font-size: 15px
+  }
+}
