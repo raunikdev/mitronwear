@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./css/Home.css";
 import Modal from "./Modal";
+import axios from "axios"
 
 function Home() {
   const [time, setTime] = useState(new Date());
   const [isModalOpen, setModalOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
+  const [sucessfully,setSucessfully] = useState("");
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -51,9 +53,19 @@ function Home() {
     setEmail(value);
     setError("");
   };
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (email) {
-      console.log(email, "sent sucessfully to database");
+
+      const response = await axios.post(`https://mitronwear-api.onrender.com/api/join-waitlist`,{email});
+      if(response?.status===200){
+        setModalOpen(false);
+      }else{
+        alert("email not saved . . . ")
+      }
+     
+      // console.log(email, "sent sucessfully to database");
+      // setSucessfully(`${email}, is added in the waitlistergw`);
+
     } else {
       setError("Email cannot be empty");
     }
@@ -63,35 +75,39 @@ function Home() {
     <div className="home">
       {isModalOpen && (
         <Modal isOpen={() => {}} onClose={() => {}}>
-          <div
-            style={{
-              backgroundColor: "white",
-              height: "50px",
-              color: "black",
-              marginBottom: "4px",
-            }}
-          >
-            <div style={{ display: "flex" }}>
+          <div className="all-modal">
+            <div style={{ display: "flex",
+                          flexDirection: "column",
+                          justifyContent: "center",
+                          alignItems:"center",
+                          height:"100%",
+                          width:"100%",
+                          gap: "30px"
+             }}>
               <div>
-                <label htmlFor={"email"}>Enter you email id:</label>
+                <label className="enter-email-text" htmlFor={"email"}>JOIN WAITLIST</label>
               </div>
               <div>
                 <input
+                  type="email"
                   id="email"
                   value={email}
                   name={"email"}
                   onChange={handleEmailInput}
-                ></input>
+                  placeholder="example@example.com"
+                  className="input-fot-email"/>
                 <div
-                  style={{ color: "red", fontSize: "12px", marginTop: "2px" }}
+                  style={ {color: email? "white":"red", fontSize: "12px", marginTop: "2px" }}
                 >
-                  {error}
+                  {email? sucessfully: error}
                 </div>
               </div>
+              <button className="submit-button"
+                      onClick={handleSubmit}>Submit</button>
+
             </div>
 
-            <button onClick={handleSubmit}>Submit</button>
-            <button onClick={handleModalClose}>Close</button>
+            <button onClick={handleModalClose} className="close-button">x</button>
           </div>
         </Modal>
       )}
@@ -99,7 +115,7 @@ function Home() {
       <p className="timer-heading">The Website will Re-release in:</p>
       <p className="clock">{Timer()}</p>
       <div className="join-explore">
-        <button className="join-waitlist" >
+        <button className="join-waitlist" onClick={handleJoinWaitList}>
           Join WaitList
         </button>
         <a href="#tshirtheader">

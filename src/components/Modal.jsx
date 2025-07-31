@@ -6,9 +6,9 @@ function Modal({ isOpen, onClose, children }) {
   return (
     <div className="modal-overlay">
       <div className="modal-content">
-        <span className="modal-close" onClick={onClose}>
+        {/* <span className="modal-close" onClick={onClose}>
           &times;
-        </span>
+        </span> */}
         {children}
       </div>
     </div>
