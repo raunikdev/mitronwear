@@ -1,0 +1,7 @@
+.image-div{
+    width: 200px;
+    height: 200px;
+    background-size: cover;      /* scale image to cover the div */
+    background-position: center; /* center the image */
+    background-repeat: no-repeat;
+}
