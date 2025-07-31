@@ -99,7 +99,7 @@ function Home() {
       <p className="timer-heading">The Website will Re-release in:</p>
       <p className="clock">{Timer()}</p>
       <div className="join-explore">
-        <button className="join-waitlist" onClick={handleJoinWaitList}>
+        <button className="join-waitlist" >
           Join WaitList
         </button>
         <a href="#tshirtheader">
