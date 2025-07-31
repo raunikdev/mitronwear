@@ -4,8 +4,8 @@ import Tshirtcard from "./tshirtcard";
 
 import ButterflyBack from './tshirtImages/butterflyBack.png'
 import ButterflyFront from './tshirtImages/butterflyFront.png'
-import PandaFront from './tshirtImages/PandaFront.png'
-import PandaBack from './tshirtImages/PandaBack.png'
+import PandaFront from './tshirtImages/pandaFront.png'
+import PandaBack from './tshirtImages/pandaBack.png'
 
 import SamuraiFront from './tshirtImages/samuraiFront.png'
 import SamuraiBack from './tshirtImages/samuraiBack.png'
