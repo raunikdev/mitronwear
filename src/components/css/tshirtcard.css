@@ -17,7 +17,9 @@
     width: 100%;
     border-radius: 4px;
     transition: 0.4s ease;
-    object-fit: cover;
+    background-size: cover;      /* scale image to cover the div */
+    background-position: center; /* center the image */
+    background-repeat: no-repeat;
 }
 .image-back:hover{
     opacity:0;

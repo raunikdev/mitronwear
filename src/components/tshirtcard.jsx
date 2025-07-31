@@ -7,8 +7,9 @@ function Tshirtcard (prop){
         <>
             <div className="card-tshirt">
                 <div className='image-div' style={{backgroundImage: `url(${prop.front})`}}>
-                    <img src={prop.back} className='image-back'/>
-                    {/* <img src={} className='add-to-cart'></img> */}
+                    <div className="image-back" style={{backgroundImage: `url(${prop.back})`}} >
+
+                    </div>
                 </div>
                 <a href={prop.link}>
                     <div className='name-price'>
