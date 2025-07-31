@@ -102,7 +102,11 @@ function Home() {
         <button className="join-waitlist" onClick={handleJoinWaitList}>
           Join WaitList
         </button>
-        <button className="explore-design">Explore Design</button>
+        <a href="#tshirtheader">
+          <button className="explore-design">
+            Explore Design
+          </button>
+        </a>
       </div> */}
     </div>
   );

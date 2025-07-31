@@ -1,7 +1,60 @@
+.card-tshirt{
+    width: 268px;
+    display: flex;
+    background-size: cover;      /* scale image to cover the div */
+    flex-direction: column;
+}
 .image-div{
-    width: 400px;
+    width: 268px;
     height: 400px;
     background-size: cover;      /* scale image to cover the div */
     background-position: center; /* center the image */
     background-repeat: no-repeat;
+    border-radius: 4px;;
+}
+.image-back{
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+    transition: 0.4s ease;
+    object-fit: cover;
+}
+.image-back:hover{
+    opacity:0;
+}
+.name-price{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    /* align-items: center; */
+}
+.original-price{
+    margin-right: 10px;
+    text-decoration: line-through;
+    color: rgb(255, 112, 112);
+}
+.heading-tshirt{
+    margin-top: 8px;
+}
+.price{
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+@media(max-width: 900px){
+    .card-tshirt{
+        width: 210px;
+    }
+    .image-div{
+        width: 210px;
+        height: 312px;
+    }
+}
+@media(max-width: 500px){
+    .card-tshirt{
+        width: 180px;
+    }
+    .image-div{
+        width: 180px;
+        height: 268px;
+    }
 }

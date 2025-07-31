@@ -1,22 +1,24 @@
-import { useState } from 'react';
 import ButterflyBack from './tshirtImages/butterflyBack.png'
 import ButterflyFront from './tshirtImages/butterflyFront.png'
 
 import './css/tshirtcard.css'
 
-function Tshirtcard (){
-    const [hovered,setHovered] = useState(false);
+function Tshirtcard (prop){
     return(
         <>
-            {/* <img src={ButterflyFront}/> */}
             <div className="card-tshirt">
-                <div className='image-div' style={{backgroundImage: `url(${ButterflyBack})`}}>
-                {/* <img className='image' 
-                     onMouseEnter={()=>{setHovered(true)}}
-                     onMouseLeave={()=>{setHovered(false)}}
-                     src={hovered? ButterflyFront: ButterflyBack}/> */}
-
+                <div className='image-div' style={{backgroundImage: `url(${prop.front})`}}>
+                    <img src={prop.back} className='image-back'/>
+                    {/* <img src={} className='add-to-cart'></img> */}
                 </div>
+                <a href={prop.link}>
+                    <div className='name-price'>
+                        <p className='heading-tshirt'><b>{prop.heading}</b></p>
+                        <p className="price"><b><span className='original-price'>{prop.originalPrice}</span>{prop.price}</b></p> 
+                    </div>
+
+                </a>
+
                 
 
             </div>

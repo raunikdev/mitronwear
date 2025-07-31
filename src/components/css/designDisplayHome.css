@@ -1,0 +1,24 @@
+.all-tshirt{
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+#tshirtheader{
+    display: flex;
+    justify-content: center;
+    scroll-margin-top: 50px;
+}
+@media(max-width: 1482px){
+    .all-tshirt{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+@media(max-width: 1185px){
+    .all-tshirt{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media(max-width: 700px){
+    .all-tshirt{
+        grid-template-columns: 1fr 1fr;
+    }
