@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./css/Header.css";
 // import { Link, Navigate, useNavigate } from 'react-router-dom';
 
@@ -20,7 +21,7 @@ const Header = () => {
         </li>
         {/* <li className="head-li"><a href="/contact">Contact</a></li> */}
         <li className="head-li">
-          <a href="/about">About</a>
+          <Link to="/about">About</Link>
         </li>
         {/* <li className="head-li"><a href="/about">About</a></li> */}
         {/* <Link to="/about">go to about page using Link tag</Link>
