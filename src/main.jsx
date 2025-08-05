@@ -4,9 +4,9 @@ import './index.css'
 import App from './App.jsx'
 import About from './components/About.jsx';
 import Catalogue from './components/Catalogue.jsx';
-import {RouterProvider,createBrowserRouter} from 'react-router-dom';
+import {RouterProvider,createHashRouter} from 'react-router-dom';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <App/>
