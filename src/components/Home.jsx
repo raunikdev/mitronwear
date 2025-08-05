@@ -19,7 +19,7 @@ function Home() {
 
   const Timer = () => {
     const now = time;
-    const targetDate = new Date("2025-08-21T00:00:00");
+    const targetDate = new Date("2025-08-30T00:00:00");
 
     const diff = targetDate - now;
 
@@ -59,6 +59,7 @@ function Home() {
       const response = await axios.post(`https://mitronwear-api.onrender.com/api/join-waitlist`,{email});
       if(response?.status===200){
         setModalOpen(false);
+        alert("You have joined the waitlist")
       }else{
         alert("email not saved . . . ")
       }
